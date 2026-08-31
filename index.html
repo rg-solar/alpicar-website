@@ -3,181 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alpicar – Werkstatt, Reifenservice &amp; mehr in Südtirol</title>
-<meta name="description" content="Alpicar in Eppan (Südtirol): Kfz-Werkstatt und Reifenservice für Sport- und Luxusfahrzeuge, Fahrzeugvermittlung mit komplettem Papierkram sowie Präzisionsschliff für Golfplatz-Mähwerke mit dem Spindelschleifer SBR900.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<title>Alpicar – Website-Entwürfe im Vergleich</title>
+<style>
+  :root{--bg:#111;--card:#1b1b1b;--line:#2c2c2c;--text:#f2f0eb;--muted:#a4a099;font-family:-apple-system,"Segoe UI",Inter,Arial,sans-serif;}
+  body{margin:0;background:var(--bg);color:var(--text);display:flex;min-height:100vh;align-items:center;justify-content:center;padding:40px;}
+  .wrap{max-width:900px;width:100%;}
+  h1{font-size:26px;margin-bottom:8px;}
+  p.sub{color:var(--muted);margin-bottom:36px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  a.card{
+    display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:28px;text-decoration:none;color:var(--text);transition:border-color .15s,transform .15s;
+  }
+  a.card:hover{border-color:#57a832;transform:translateY(-2px);}
+  a.card b{display:block;font-size:18px;margin-bottom:6px;}
+  a.card span{color:var(--muted);font-size:14px;line-height:1.5;display:block;}
+  .tag{display:inline-block;margin-top:14px;font-size:12px;color:#57a832;font-weight:700;letter-spacing:.04em;}
+  @media (max-width:640px){.grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
-
-<header>
-  <div class="nav">
-    <a href="#top" class="logo"><img src="assets/img/logo-alpicar.png" alt="Alpicar – garage, grinding & more" class="logo-img"></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#werkstatt">Werkstatt</a>
-      <a href="#vermittlung">Fahrzeugvermittlung</a>
-      <a href="#schleifservice">Schleifservice</a>
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-    <a href="#kontakt" class="nav-cta">Kontakt aufnehmen</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">☰</button>
+  <div class="wrap">
+    <h1>Alpicar — zwei Website-Entwürfe</h1>
+    <p class="sub">Zum Vergleich, bevor wir uns für eine Richtung entscheiden.</p>
+    <div class="grid">
+      <a class="card" href="entwurf-1/index.html">
+        <b>Entwurf 1</b>
+        <span>Dunkles, premium Design. Ruhige Karten mit Icons, klare Struktur.</span>
+        <span class="tag">DUNKEL · ICON-BASIERT</span>
+      </a>
+      <a class="card" href="entwurf-2/index.html">
+        <b>Entwurf 2</b>
+        <span>Helles, warmes „Alpin"-Design. Foto-Platzhalter und eine Marken-/Lieferanten-Übersicht.</span>
+        <span class="tag">HELL · FOTO-GELEITET</span>
+      </a>
+    </div>
   </div>
-</header>
-
-<main id="top">
-
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Alpicar · Garage, Grinding &amp; More · Eppan a. d. Weinstraße</span>
-      <h1>Präzision für Fahrzeuge, die es verdienen.</h1>
-      <p class="lead">Alpicar ist die Werkstatt in Südtirol für Reifenservice und klassische Kfz-Arbeiten an Sport- und Luxusfahrzeugen, für die Vermittlung und Abwicklung beim Autokauf und -verkauf sowie für den Präzisionsschliff von Golfplatz-Mähwerken.</p>
-      <div class="hero-actions">
-        <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
-        <a href="#leistungen" class="btn btn-ghost">Leistungen entdecken</a>
-      </div>
-      <div class="hero-stats">
-        <div><b>Werkstatt</b><span>Reifen, Bremsen, Kontrollen</span></div>
-        <div><b>Vermittlung</b><span>An- &amp; Verkauf, Papierkram</span></div>
-        <div><b>SBR900</b><span>Präzisionsschliff für Mähwerke</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="leistungen">
-    <div class="wrap">
-      <div class="services-head">
-        <span class="eyebrow">Leistungen</span>
-        <h2>Vier Bereiche, ein Anspruch: Präzision.</h2>
-        <p class="lead">Alpicar vereint Werkstatt, Reifenservice, Fahrzeugvermittlung und einen spezialisierten Schleifservice unter einem Dach — für Autobesitzer ebenso wie für Golfclubs und Greenkeeper.</p>
-      </div>
-
-      <div class="service-grid">
-
-        <article class="service-card" id="reifenservice">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1M18.5 18.5l-2.1-2.1M7.6 7.6L5.5 5.5"/></svg>
-          </div>
-          <h3>Reifenservice für Sport- &amp; Luxusfahrzeuge</h3>
-          <p>Reifenwechsel und Reifenverkauf mit Fokus auf hochwertige und leistungsstarke Fahrzeuge. Sorgfalt im Umgang mit anspruchsvollen Felgen und Fahrwerken.</p>
-          <ul>
-            <li>Reifenwechsel (Saison &amp; Einzelservice)</li>
-            <li>Reifenverkauf namhafter Marken, u.a. Michelin, Pirelli, Vredestein</li>
-            <li>Erfahrung mit Marken wie Porsche, Ferrari, Lamborghini, Maserati, Bentley und Rolls-Royce</li>
-            <li>Persönliche Beratung zur passenden Bereifung</li>
-          </ul>
-        </article>
-
-        <article class="service-card" id="werkstatt">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4"/><path d="M12 4.5v1.2M4.5 13H3M21 13h-1.5"/></svg>
-          </div>
-          <h3>Kfz-Werkstatt für alle Fälle</h3>
-          <p>Neben dem Spezialgebiet Reifen bietet Alpicar auch die klassische Werkstattarbeit — für den Alltag genauso wie für besondere Fahrzeuge.</p>
-          <ul>
-            <li>Bremsen &amp; Bremsservice</li>
-            <li>Fahrzeugkontrollen &amp; Diagnose</li>
-            <li>Allgemeine Wartung &amp; Reparaturen</li>
-            <li>Persönliche, unkomplizierte Beratung</li>
-          </ul>
-        </article>
-
-        <article class="service-card" id="vermittlung">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 3.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H9a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/><path d="M9 12l2 2 4-4M9 16.5h6"/></svg>
-          </div>
-          <h3>Fahrzeugvermittlung &amp; Papierkram</h3>
-          <p>Auf Wunsch übernimmt Alpicar auch die Suche nach einem passenden Gebrauchtwagen — auch Oldtimer — inklusive der gesamten Abwicklung. Ebenso beim Verkauf des eigenen Fahrzeugs.</p>
-          <ul>
-            <li>Fahrzeugsuche nach Kundenwunsch, auch Oldtimer</li>
-            <li>Vollständige Abwicklung beim An- und Verkauf</li>
-            <li>Unterstützung bei Import- &amp; Exportpapieren</li>
-            <li>Persönliche Begleitung durch den gesamten Ablauf</li>
-          </ul>
-        </article>
-
-        <article class="service-card" id="schleifservice">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l7-7"/><circle cx="16" cy="8" r="5"/><path d="M13 11l-3 3"/><path d="M4 21l-1-1 3-3"/></svg>
-          </div>
-          <h3>Präzisionsschliff für Golfplatz-Mähwerke</h3>
-          <p>Mit der Präzisions-Schleifmaschine SBR900 (System Ettrich) schleift Alpicar Spindelmähwerke und Untermesser von Golfplatz-Rasenmähern für ein makelloses Schnittbild — inklusive Sichelmesser-Schliff.</p>
-          <ul>
-            <li>Präzisionsschliff für Spindelmähwerke &amp; Untermesser</li>
-            <li>Sichelmesser-Schleifvorrichtung als Ergänzung</li>
-            <li>Für Golfclubs und Greenkeeper in Südtirol und Umgebung</li>
-            <li>Spezialtechnik <b>SBR900 · System Ettrich</b></li>
-          </ul>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="ueber-uns">
-    <div class="wrap">
-      <div class="about-grid">
-        <div>
-          <span class="eyebrow">Über uns</span>
-          <h2>Ein inhabergeführter Betrieb aus Leidenschaft für Präzision.</h2>
-          <p class="lead">Alpicar SRL hat seinen Sitz in Eppan an der Weinstraße, mitten in Südtirol. Aus der Begeisterung für hochwertige Fahrzeuge und für präzise Technik ist ein Betrieb entstanden, der vom Reifenservice über die klassische Werkstatt und die Fahrzeugvermittlung bis zum Präzisionsschliff für Golfplatz-Mähwerke reicht — "garage, grinding &amp; more" eben.</p>
-          <p>Ob am Fahrzeug, am Schreibtisch beim Papierkram oder an der Schleifmaschine — es zählt dieselbe Sorgfalt bis ins Detail.</p>
-        </div>
-        <div class="about-card">
-          <span class="role">Ansprechpartner</span>
-          <h3>Gunnar Giuliani</h3>
-          <p>Inhaber, Alpicar SRL</p>
-          <p style="margin-top:20px;">Strada Riva di Sotto 81<br>39057 Appiano sulla strada del vino (BZ)<br>Südtirol / Alto Adige</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="kontakt">
-    <div class="wrap">
-      <span class="eyebrow">Kontakt</span>
-      <h2>Sprechen wir über Ihr Fahrzeug oder Ihren Platz.</h2>
-      <p class="lead" style="margin-bottom:40px;">Ob Reifenservice, Werkstatttermin, Fahrzeugvermittlung oder Präzisionsschliff — melden Sie sich einfach.</p>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-item">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span>
-            <div><b>Telefon</b><span><a href="tel:+393397517885">+39 339 751 78 85</a></span></div>
-          </div>
-          <div class="contact-item">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span>
-            <div><b>E-Mail</b><span><a href="mailto:info@alpicar.bz">info@alpicar.bz</a></span></div>
-          </div>
-          <div class="contact-item">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><b>Adresse</b><span>Strada Riva di Sotto 81, 39057 Appiano sulla strada del vino (BZ)</span></div>
-          </div>
-          <div class="contact-item">
-            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
-            <div><b>Termine</b><span>Nach Vereinbarung — bitte telefonisch oder per E-Mail anfragen.</span></div>
-          </div>
-        </div>
-
-        <div class="map-note">
-          Anfahrtsskizze / Karte folgt<br>(Strada Riva di Sotto 81, 39057 Appiano sulla strada del vino)
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="wrap footer-row">
-    <span>© <span id="year"></span> Alpicar SRL · Eppan an der Weinstraße (BZ)</span>
-    <span><a href="impressum.html">Impressum</a></span>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
 </body>
 </html>
