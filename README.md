@@ -30,6 +30,8 @@ Ordner. Bitte vor Veröffentlichung kurz gegenchecken:
   `assets/img/` legen und in `index.html` einbinden.
 - Referenzkunden (z. B. Golfclubs) wurden bewusst nicht namentlich genannt,
   da im Ordner keine Freigabe dafür vorlag – kann bei Bedarf ergänzt werden.
+- Logo: aus `logo/LogoAlpicar verde.pdf` freigestellt (Vektor-Version, hohe Auflösung)
+  und für den dunklen Header eingefärbt (Schriftzug hell, Bergsilhouette im Original-Grün).
 
 ## Italienische Version (nächster Schritt)
 
