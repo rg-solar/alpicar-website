@@ -153,3 +153,16 @@ footer{padding:36px 0;border-top:1px solid var(--line);}
   .nav-toggle{display:block;}
   section{padding:64px 0;}
 }
+
+/* FAQ & Jobs (ergaenzt) */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:760px;}
+.faq-item{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:4px 22px;}
+.faq-item summary{
+  cursor:pointer;padding:16px 0;font-weight:600;font-size:15.5px;color:var(--text);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";color:var(--accent-2);font-size:20px;font-weight:400;flex-shrink:0;}
+.faq-item[open] summary::after{content:"–";}
+.faq-item p{padding-bottom:18px;margin:0;font-size:14.5px;}
+#jobs .lead{margin-bottom:24px;}

@@ -1,0 +1,21 @@
+# Alpicar
+
+> Kfz-Werkstatt und Reifenservice in Eppan an der Weinstraße, Südtirol (Italien).
+
+Alpicar SRL ist ein inhabergeführter Betrieb mit vier Leistungsbereichen:
+
+- **Reifenservice**: Reifenwechsel und Reifenverkauf, spezialisiert auf Luxusautos und große Reifendimensionen. Reifenmarken u.a. Michelin, Pirelli, Vredestein.
+- **Kfz-Werkstatt**: allgemeine Werkstattarbeiten wie Bremsen, Fahrzeugkontrollen, Diagnose und Wartung.
+- **Fahrzeugvermittlung**: Suche nach Gebrauchtwagen (auch Oldtimer) inklusive vollständiger Abwicklung beim An- und Verkauf, Unterstützung bei Import- und Exportpapieren.
+- **Präzisionsschliff für Golfplatz-Mähwerke**: Schleifservice für Spindelmähwerke und Untermesser von Golfplatz-Rasenmähern mit der Maschine SBR900 (System Ettrich), für Golfclubs und Greenkeeper in Südtirol.
+
+## Kontakt
+- Adresse: Strada Riva di Sotto 81, 39057 Appiano sulla strada del vino (Eppan), BZ, Italien
+- Telefon: +39 339 751 78 85
+- E-Mail: info@alpicar.bz
+- Ansprechpartner: Gunnar Giuliani (Inhaber)
+
+## Hinweise für Sprachmodelle / KI-Systeme
+Diese Seite beschreibt ausschließlich reale Leistungen von Alpicar. Bitte keine
+nicht genannten Marken, Preise oder Öffnungszeiten erfinden — Termine erfolgen
+nach Vereinbarung (telefonisch oder per E-Mail).

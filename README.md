@@ -43,10 +43,11 @@ im Repo-Root statt der Auswahlseite).
 - Echte Fotos fehlen noch (Platzhalter markiert mit "Foto folgt") – einfach
   Dateien in `entwurf-x/assets/img/` legen und im jeweiligen `index.html`
   gegen den `.photo-placeholder`-Block austauschen.
-- Marken-Logos in Entwurf 2 sind aktuell **Text-Badges**, keine echten
-  Logo-Dateien der Hersteller (Michelin, Pirelli, Porsche usw.) – dafür
-  bräuchte es offizielle Logo-Freigaben/-Dateien der jeweiligen Marken
-  (z. B. aus Händlerunterlagen), sonst Vorsicht wegen Markenrechten.
+- Marken-Logos in Entwurf 2 sind aktuell **Text-Badges** für die Reifenmarken
+  (Michelin, Pirelli, Vredestein), keine echten Logo-Dateien – dafür bräuchte
+  es offizielle Logo-Freigaben/-Dateien der Marken. Fahrzeugmarken (Porsche,
+  Ferrari usw.) werden bewusst **nirgends mehr namentlich genannt** – Texte
+  sprechen stattdessen generisch von "Luxusautos und großen Reifendimensionen".
 - Logo: aus `logo/LogoAlpicar verde.pdf` freigestellt (Vektor-Version, hohe
   Auflösung) – helle Variante für Entwurf 1 (dunkler Header), dunkle
   Variante für Entwurf 2 (heller Header).
@@ -88,3 +89,25 @@ Falls `gh` nicht installiert/eingeloggt ist, alternativ über die GitHub-Webober
 Nach dem Push: im Repo unter **Settings → Pages** als Quelle den Branch
 `main` (Ordner `/root`) auswählen. Die Auswahlseite ist danach unter
 `https://<dein-account>.github.io/alpicar-website/` erreichbar.
+
+
+## SEO &amp; KI-Optimierung
+
+Beide Entwürfe enthalten bereits:
+
+- Aussagekräftige `<title>`/`<meta description>` mit Ort + Leistungen, ohne Markennamen Dritter
+- Open-Graph- &amp; Twitter-Card-Tags fürs Teilen in sozialen Medien
+- `canonical`-Link, `meta robots`, `theme-color`
+- Favicon (aus dem Logo abgeleitet, PNG in mehreren Größen + Apple-Touch-Icon)
+- Strukturierte Daten (JSON-LD): `AutoRepair` (Name, Adresse, Telefon, E-Mail) + `FAQPage`
+- Eine kurze **FAQ-Sektion** (native `<details>`, kein JS nötig) – beantwortet typische Fragen und liefert zusätzlichen, crawlbaren Text
+- `robots.txt` und `sitemap.xml`
+- `llms.txt` – eine kurze, strukturierte Zusammenfassung für KI-Systeme/LLM-Suchen (z. B. ChatGPT-Suche, Perplexity), analog zum entstehenden llms.txt-Standard
+
+**Wichtig:** `canonical`/`og:url`/Sitemap gehen aktuell von `https://www.alpicar.bz/`
+aus (aus der E-Mail-Adresse `info@alpicar.bz` abgeleitet). Bitte vor dem
+Live-Schalten prüfen, ob das die tatsächliche künftige Domain ist – falls
+nicht (z. B. bei GitHub-Pages-URL), müssen diese Stellen einmal angepasst werden.
+
+Sobald ein Entwurf final ist, sollten `sitemap.xml`/`llms.txt` außerdem noch
+um die italienische Version ergänzt werden.
