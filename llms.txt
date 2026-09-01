@@ -9,6 +9,9 @@ Alpicar SRL ist ein inhabergeführter Betrieb mit vier Leistungsbereichen:
 - **Fahrzeugvermittlung**: Suche nach Gebrauchtwagen (auch Oldtimer) inklusive vollständiger Abwicklung beim An- und Verkauf, Unterstützung bei Import- und Exportpapieren.
 - **Präzisionsschliff für Golfplatz-Mähwerke**: Schleifservice für Spindelmähwerke und Untermesser von Golfplatz-Rasenmähern mit der Maschine SBR900 (System Ettrich), für Golfclubs und Greenkeeper in Südtirol.
 
+## Sprachen
+Diese Website ist auf Deutsch (/) und Italienisch (/it/) verfügbar; beide Versionen haben identische Inhalte.
+
 ## Kontakt
 - Adresse: Strada Riva di Sotto 81, 39057 Appiano sulla strada del vino (Eppan), BZ, Italien
 - Telefon: +39 339 751 78 85

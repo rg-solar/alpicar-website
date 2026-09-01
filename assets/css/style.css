@@ -166,3 +166,32 @@ footer{padding:36px 0;border-top:1px solid var(--line);}
 .faq-item[open] summary::after{content:"–";}
 .faq-item p{padding-bottom:18px;margin:0;font-size:14.5px;}
 #jobs .lead{margin-bottom:24px;}
+
+/* Sprachumschalter */
+.lang-switch{display:flex;align-items:center;gap:2px;background:var(--bg-alt);border:1px solid var(--line);border-radius:999px;padding:3px;font-size:12.5px;font-weight:700;}
+.lang-switch a{padding:6px 12px;border-radius:999px;color:var(--text-muted);letter-spacing:.03em;}
+.lang-switch a.active{background:var(--accent);color:#fbf7ee;}
+.lang-switch a:hover:not(.active){color:var(--text);}
+@media (max-width:900px){
+  .lang-switch{order:3;}
+}
+
+/* Mobile-Feinschliff */
+@media (max-width:900px){
+  .nav{padding:14px 20px;gap:10px;}
+  .nav-cta{display:none;}
+  .logo-img{height:30px;}
+  .wrap{padding:0 20px;}
+  .faq-item{padding:2px 18px;}
+  .brand-row{gap:10px;}
+  .brand-chip{padding:10px 16px;font-size:14px;}
+}
+@media (max-width:480px){
+  section{padding:52px 0;}
+  .hero{padding:56px 0 64px;}
+  .eyebrow{font-size:12px;}
+  .hero-stats{gap:22px;}
+  .service-card-body{padding:22px 20px 24px;}
+  .contact-card,.about-card{padding:24px;}
+  .btn{padding:13px 22px;font-size:14px;}
+}

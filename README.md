@@ -1,68 +1,89 @@
-# Alpicar – Website (zwei Entwürfe zur Auswahl)
+# Alpicar – Website
 
-Statische Website für **Alpicar SRL** (Eppan an der Weinstraße, Südtirol).
-Aktuell **nur auf Deutsch**. Die italienische Version folgt, sobald ein
-Entwurf final ist (siehe unten).
+Statische Website für **Alpicar SRL** (Appiano sulla strada del vino / Eppan
+an der Weinstraße, Südtirol). Deutsch und Italienisch, helles "Alpin"-Design.
 
 ## Struktur
 
 ```
 alpicar-website/
-├── index.html            Auswahlseite: verlinkt beide Entwürfe zum Vergleich
-├── entwurf-1/             Dunkles, premium Design (Icons, ruhige Karten)
-│   ├── index.html
-│   ├── impressum.html
-│   └── assets/
-├── entwurf-2/             Helles "Alpin"-Design (Foto-Platzhalter, Marken-Übersicht)
-│   ├── index.html
-│   ├── impressum.html
-│   └── assets/
+├── index.html            Startseite (Deutsch)
+├── impressum.html         Impressum (Deutsch)
+├── it/
+│   ├── index.html         Startseite (Italienisch)
+│   └── impressum.html     Note legali (Italienisch)
+├── assets/
+│   ├── css/style.css      gesamtes Design (von DE & IT gemeinsam genutzt)
+│   ├── js/main.js         Menü-Toggle, Jahr im Footer
+│   └── img/                Logo, Favicons, Foto-Platzhalter
+├── robots.txt
+├── sitemap.xml             inkl. hreflang DE/IT
+├── llms.txt                Zusammenfassung für KI-Systeme
 └── README.md
 ```
 
-Reines HTML/CSS/JS ohne Build-Schritt. Zum Vergleichen einfach
-`index.html` im Browser öffnen und zwischen den beiden Entwürfen klicken.
+Reines HTML/CSS/JS ohne Build-Schritt. DE und IT teilen sich `assets/` –
+Design-Änderungen an `style.css` wirken automatisch auf beide Sprachen.
 
-## Die beiden Entwürfe im Überblick
+## Sprachen
 
-- **Entwurf 1** — dunkel, Akzentfarbe Grün (aus dem Logo), vier Leistungs-
-  Karten mit Icons, kompakt und ruhig.
-- **Entwurf 2** — hell/warm ("Alpin"-Anmutung), zusätzlich: eine
-  Marken-/Lieferanten-Übersicht (Reifenmarken + Fahrzeugmarken als
-  Text-Badges) sowie Foto-Platzhalter in Hero, Leistungskarten, Über-uns
-  und Kontakt.
+Oben rechts in der Navigation wechselt ein DE/IT-Umschalter zwischen den
+Versionen. Beide Seiten sind inhaltlich identisch, mit `hreflang`-Angaben
+im `<head>` und in der `sitemap.xml` verknüpft (wichtig für Google, damit
+nicht eine Sprachversion als "Duplicate Content" der anderen gewertet wird).
 
-Sobald ihr euch für einen entschieden habt, entferne ich den anderen
-Entwurf und hebe den gewählten auf die oberste Ebene (`index.html` direkt
-im Repo-Root statt der Auswahlseite).
+Um Inhalte zu ändern, künftig **beide** Sprachversionen pflegen:
+`index.html` (Deutsch) und `it/index.html` (Italienisch) enthalten denselben
+Aufbau, nur den Text jeweils in der passenden Sprache.
+
+## Mobile
+
+Die Seite ist responsiv (ein CSS, keine separate mobile Seite):
+
+- Navigation klappt unter ca. 900px Breite zu einem Menü-Icon (☰) zusammen;
+  der "Kontakt aufnehmen"-Button wird auf Mobilgeräten ausgeblendet, da der
+  Kontakt-Link im aufklappbaren Menü enthalten ist.
+- Alle Grid-Layouts (Hero, Leistungen, Über uns, Kontakt) wechseln unter
+  900px auf eine Spalte.
+- Zusätzliche Feinjustierung (Abstände, Schriftgrößen, Kartenränder) unter
+  480px Breite für kleine Smartphones.
+
+Zum Testen: Browserfenster schmaler ziehen oder die Entwicklertools-
+Gerätesimulation verwenden.
 
 ## Inhalte / offene Punkte zum Prüfen
 
 - Öffnungszeiten / Terminvergabe – aktuell nur „nach Vereinbarung" formuliert.
-- Impressum: Handelsregister-/REA-Nummer und ggf. Datenschutzhinweise ergänzen.
-- Echte Fotos fehlen noch (Platzhalter markiert mit "Foto folgt") – einfach
-  Dateien in `entwurf-x/assets/img/` legen und im jeweiligen `index.html`
-  gegen den `.photo-placeholder`-Block austauschen.
-- Marken-Logos in Entwurf 2 sind aktuell **Text-Badges** für die Reifenmarken
-  (Michelin, Pirelli, Vredestein), keine echten Logo-Dateien – dafür bräuchte
-  es offizielle Logo-Freigaben/-Dateien der Marken. Fahrzeugmarken (Porsche,
-  Ferrari usw.) werden bewusst **nirgends mehr namentlich genannt** – Texte
+- Impressum: Handelsregister-/REA-Nummer und ggf. Datenschutzhinweise ergänzen
+  (in beiden Sprachversionen).
+- Echte Fotos fehlen noch (Platzhalter markiert mit "Foto folgt" /
+  "Foto in arrivo") – Dateien in `assets/img/` ablegen und in beiden
+  `index.html`-Dateien gegen den `.photo-placeholder`-Block austauschen.
+- Marken-Logos sind aktuell **Text-Badges** für die Reifenmarken (Michelin,
+  Pirelli, Vredestein), keine echten Logo-Dateien – dafür bräuchte es
+  offizielle Logo-Freigaben/-Dateien der Marken. Fahrzeugmarken (Porsche,
+  Ferrari usw.) werden bewusst **nirgends** namentlich genannt – Texte
   sprechen stattdessen generisch von "Luxusautos und großen Reifendimensionen".
-- Logo: aus `logo/LogoAlpicar verde.pdf` freigestellt (Vektor-Version, hohe
-  Auflösung) – helle Variante für Entwurf 1 (dunkler Header), dunkle
-  Variante für Entwurf 2 (heller Header).
 - Referenzkunden (z. B. Golfclubs) wurden bewusst nicht namentlich genannt,
   da im Ordner keine Freigabe dafür vorlag – kann bei Bedarf ergänzt werden.
+- Logo: aus `logo/LogoAlpicar verde.pdf` freigestellt (Vektor-Version, hohe
+  Auflösung), helle Header-Variante + Favicon (Bergsilhouette).
 
-## Italienische Version (nächster Schritt)
+## SEO &amp; KI-Optimierung
 
-Sobald ein Entwurf final ist:
+- Aussagekräftige `<title>`/`<meta description>` mit Ort + Leistungen, ohne Markennamen Dritter
+- Open-Graph- &amp; Twitter-Card-Tags fürs Teilen in sozialen Medien
+- `canonical`- und `hreflang`-Links (DE/IT), `meta robots`, `theme-color`
+- Favicon (aus dem Logo abgeleitet, mehrere Größen + Apple-Touch-Icon)
+- Strukturierte Daten (JSON-LD): `AutoRepair` (Name, Adresse, Telefon, E-Mail) + `FAQPage`, je Sprache
+- FAQ-Sektion (natives `<details>`, kein JS nötig) – beantwortet typische Fragen, liefert zusätzlichen crawlbaren Text
+- `robots.txt`, `sitemap.xml` (mit hreflang-Alternates)
+- `llms.txt` – kurze, strukturierte Zusammenfassung für KI-Systeme (ChatGPT-Suche, Perplexity u. Ä.)
 
-1. Neuen Ordner `it/` im gewählten Entwurf anlegen, `index.html` und
-   `impressum.html` hineinkopieren und übersetzen (Design/CSS/JS bleiben
-   unverändert, einfach mitverlinken: `../assets/...`).
-2. Auf jeder Seite eine Sprachumschaltung ergänzen (Link `index.html` ↔ `it/index.html`).
-3. `<html lang="de">` in der IT-Version auf `lang="it"` ändern.
+**Wichtig:** `canonical`/`og:url`/Sitemap gehen aktuell von `https://www.alpicar.bz/`
+aus (aus der E-Mail-Adresse `info@alpicar.bz` abgeleitet). Bitte vor dem
+Live-Schalten prüfen, ob das die tatsächliche künftige Domain ist – falls
+nicht (z. B. bei GitHub-Pages-URL), müssen diese Stellen einmal angepasst werden.
 
 ## Auf GitHub veröffentlichen
 
@@ -87,27 +108,6 @@ Falls `gh` nicht installiert/eingeloggt ist, alternativ über die GitHub-Webober
 ### Hosting via GitHub Pages
 
 Nach dem Push: im Repo unter **Settings → Pages** als Quelle den Branch
-`main` (Ordner `/root`) auswählen. Die Auswahlseite ist danach unter
-`https://<dein-account>.github.io/alpicar-website/` erreichbar.
-
-
-## SEO &amp; KI-Optimierung
-
-Beide Entwürfe enthalten bereits:
-
-- Aussagekräftige `<title>`/`<meta description>` mit Ort + Leistungen, ohne Markennamen Dritter
-- Open-Graph- &amp; Twitter-Card-Tags fürs Teilen in sozialen Medien
-- `canonical`-Link, `meta robots`, `theme-color`
-- Favicon (aus dem Logo abgeleitet, PNG in mehreren Größen + Apple-Touch-Icon)
-- Strukturierte Daten (JSON-LD): `AutoRepair` (Name, Adresse, Telefon, E-Mail) + `FAQPage`
-- Eine kurze **FAQ-Sektion** (native `<details>`, kein JS nötig) – beantwortet typische Fragen und liefert zusätzlichen, crawlbaren Text
-- `robots.txt` und `sitemap.xml`
-- `llms.txt` – eine kurze, strukturierte Zusammenfassung für KI-Systeme/LLM-Suchen (z. B. ChatGPT-Suche, Perplexity), analog zum entstehenden llms.txt-Standard
-
-**Wichtig:** `canonical`/`og:url`/Sitemap gehen aktuell von `https://www.alpicar.bz/`
-aus (aus der E-Mail-Adresse `info@alpicar.bz` abgeleitet). Bitte vor dem
-Live-Schalten prüfen, ob das die tatsächliche künftige Domain ist – falls
-nicht (z. B. bei GitHub-Pages-URL), müssen diese Stellen einmal angepasst werden.
-
-Sobald ein Entwurf final ist, sollten `sitemap.xml`/`llms.txt` außerdem noch
-um die italienische Version ergänzt werden.
+`main` (Ordner `/root`) auswählen. Die Seite ist danach unter
+`https://<dein-account>.github.io/alpicar-website/` erreichbar (Deutsch)
+bzw. `.../it/` (Italienisch).
