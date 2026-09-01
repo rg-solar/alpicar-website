@@ -88,17 +88,14 @@ Fahrzeugübergabe, Porträt Gunnar Giuliani/Team. Sobald Fotos vorliegen,
 einfach in `assets/img/` ablegen und die jeweiligen `.photo-placeholder`-
 Blöcke in `index.html` / `it/index.html` ersetzen.
 
-**2. Reifenmarken-Logos.** Aktuell weiterhin Text-Badges (mit kleinem
-Reifen-Icon). Ein Versuch, offizielle Vektor-Logos von Michelin, Pirelli und
-Vredestein automatisch zu laden, ist an den Netzwerk-Einschränkungen dieser
-Arbeitsumgebung gescheitert (Wikimedia/Markenseiten waren nicht erreichbar).
-Am schnellsten geht es, wenn Gunnar die drei offiziellen Logo-Dateien (SVG
-oder PNG mit transparentem Hintergrund, z. B. aus dem Presse-/Händlerbereich
-der Marken-Websites) schickt – die werden dann direkt eingesetzt.
+**2. Reifenmarken-Logos – erledigt.** Echte Michelin-/Pirelli-/
+Vredestein-Logos (vom Nutzer geschickt) sind zugeschnitten in
+`assets/img/logo-*.png` eingebaut und ersetzen die frühere Text-Badge-Lösung.
 
-**3. Über uns – noch offen.** Wartet auf ein paar Stichworte von Gunnar
-(warum gegründet, wie lange schon, was ihm wichtig ist), um den Abschnitt
-persönlicher zu machen.
+**3. Über uns – erledigt.** Text ergänzt: Gunnar Giuliani ist seit 1994
+Mechaniker, über 30 Jahre Erfahrung, Fokus auf Präzision und
+Kundenzufriedenheit (Angaben direkt vom Nutzer). Echtes Foto folgt noch,
+sobald es gemacht ist.
 
 **4. Impressum.** Handelsregister-/REA-Nummer und eine rechtssichere
 DSGVO-Angabe nach Art. 13 sollten von Alpicar (ggf. mit Steuerberater/
