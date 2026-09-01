@@ -29,4 +29,18 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.alpicar.bz/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.alpicar.bz/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.alpicar.bz/it/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.alpicar.bz/it/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.alpicar.bz/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.alpicar.bz/it/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>

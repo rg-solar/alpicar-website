@@ -98,12 +98,14 @@ header::before{
 .brand-chip{
   background:var(--bg-card);border:1px solid var(--line);border-radius:10px;
   padding:12px 20px;font-weight:700;font-size:15px;color:var(--text);letter-spacing:.01em;
+  display:inline-flex;align-items:center;gap:8px;
 }
+.brand-chip svg{width:16px;height:16px;stroke:var(--accent-2);flex-shrink:0;}
 .brand-note{font-size:12px;color:var(--text-muted);margin-top:18px;max-width:520px;}
 
 /* Leistungen */
 .services-head{max-width:640px;margin-bottom:48px;}
-.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .service-card{
   background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
 }
@@ -150,7 +152,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);}
 .legal a{color:var(--accent);}
 
 @media (max-width:900px){
-  .hero-grid,.about-grid,.contact-grid,.service-grid{grid-template-columns:1fr;}
+  .hero-grid,.about-grid,.contact-grid,.service-grid,.sbr900-grid{grid-template-columns:1fr;}
   .hero .photo-placeholder{aspect-ratio:16/10;}
   .nav-links{
     position:fixed;inset:64px 0 0 0;background:var(--bg);flex-direction:column;padding:32px 24px;gap:22px;
@@ -201,4 +203,49 @@ footer{padding:36px 0;border-top:1px solid var(--line);}
   .service-card-body{padding:22px 20px 24px;}
   .contact-card,.about-card{padding:24px;}
   .btn{padding:13px 22px;font-size:14px;}
+}
+
+/* Self-hosted Inter (statt Google Fonts) */
+@font-face{font-family:"Inter";src:url("../fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Inter";src:url("../fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Inter";src:url("../fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Inter";src:url("../fonts/inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Inter";src:url("../fonts/inter-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap;}
+
+/* Hero-Subline: klare Sofort-Aussage ueber dem emotionalen Lead-Text */
+.hero-subline{font-size:20px;font-weight:600;color:var(--text);margin:-4px 0 14px;}
+
+/* Trust-Zeile direkt nach dem Hero */
+.trust-line{padding:20px 0;border-bottom:1px solid var(--line);background:var(--bg-card);}
+.trust-line .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 16px;text-align:center;}
+.trust-line span{font-size:13.5px;color:var(--text-muted);font-weight:600;}
+.trust-line span[aria-hidden]{color:var(--accent-2);font-weight:700;}
+
+/* Kontakt: CTA-Zeile (Anrufen / WhatsApp / Route) */
+.contact-cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px;}
+.btn-whatsapp{background:#25D366;color:#fff;}
+.btn-whatsapp:hover{opacity:.9;}
+
+/* SBR900 Spezialbereich */
+.sbr900{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sbr900-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+.sbr900-points{margin:20px 0 28px;padding:0;list-style:none;}
+.sbr900-points li{padding:9px 0;border-top:1px solid var(--line);color:var(--text-muted);font-size:14px;display:flex;gap:10px;}
+.sbr900-points li:first-child{border-top:none;padding-top:0;}
+.sbr900-points li::before{content:"—";color:var(--accent-2);flex-shrink:0;}
+.sbr900-photos .photo-placeholder{aspect-ratio:4/3;margin-bottom:12px;}
+.sbr900-vn{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.sbr900-vn .photo-placeholder{aspect-ratio:1/1;padding:10px;font-size:11px;}
+
+/* Mobile Sticky-Kontaktleiste */
+.mobile-stickybar{display:none;}
+@media (max-width:900px){
+  body{padding-bottom:66px;}
+  .mobile-stickybar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--bg-card);border-top:1px solid var(--line);
+    box-shadow:0 -4px 16px rgba(0,0,0,.10);
+  }
+  .mobile-stickybar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 8px;font-size:11px;font-weight:600;color:var(--text);}
+  .mobile-stickybar svg{width:20px;height:20px;stroke:var(--accent);}
 }
