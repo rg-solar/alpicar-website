@@ -26,7 +26,7 @@ img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
 section{padding:88px 0;}
-h1,h2,h3{font-weight:700;line-height:1.15;margin:0 0 16px;color:var(--text);}
+h1,h2,h3{font-weight:700;line-height:1.15;margin:0 0 16px;color:var(--text);overflow-wrap:break-word;}
 h2{font-size:clamp(28px,4vw,38px);}
 h3{font-size:20px;}
 p{margin:0 0 16px;color:var(--text-muted);}
@@ -236,6 +236,11 @@ footer{padding:36px 0;border-top:1px solid var(--line);}
 .sbr900-photos .photo-placeholder{aspect-ratio:4/3;margin-bottom:12px;}
 .sbr900-vn{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .sbr900-vn .photo-placeholder{aspect-ratio:1/1;padding:10px;font-size:11px;}
+@media (max-width:900px){
+  /* .sbr900-grid is redeclared unconditionally above (same specificity),
+     so the 900px collapse-to-1fr rule needs to come after it to win the cascade. */
+  .sbr900-grid{grid-template-columns:1fr;}
+}
 
 /* Mobile Sticky-Kontaktleiste */
 .mobile-stickybar{display:none;}
