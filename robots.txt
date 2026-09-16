@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /alt/
 
 Sitemap: https://www.alpicar.bz/sitemap.xml
